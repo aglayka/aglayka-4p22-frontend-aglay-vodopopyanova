@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Comic Sans MS';
+    src: url('ComicSansMS-Bold.woff2') format('woff2'),
+        url('ComicSansMS-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Teddy Bear';
+    src: url('TeddyBear.woff2') format('woff2'),
+        url('TeddyBear.woff') format('woff'),
+        url('TeddyBear.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
