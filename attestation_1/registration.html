@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="regstyle.css">
+    <link rel="stylesheet" type="text/css" href="fonts/fonts.css">
+    <link rel="icon" href="img/auth.png" type="image/x-icon">
+    <title>Форма</title>
+</head>
+<body class="body">
+    <header class="header">
+        <div class="header__logo"></div>
+        <h1 class="header__title">PCS Frontend</h1>
+        <div class="header__registration"><a class="registration__link" href="registration.html">Регистрация</a></div> 
+        <div class="header__authorization"><a class="authorization__link" href="index.html">Вход</a></div>
+</header>
+    <main class="main">
+            <section class="my-registration-form">
+                <form class="registration">
+                    <h2 class="registration__title">Вход</h2>
+                    <div class="registration__wrap">
+                        <div class="registration__box">
+                            <label class="registration__label" for="email">Email</label>
+                            <input class="registration__input" id="email" name="email" type="email" placeholder="Введите email">
+                        </div>
+                        <div class="registration__box">
+                            <label class="registration__label" for="password">Пароль</label> 
+                            <input class="registration__input" id="password" name="password" type="password" placeholder="Введите пароль"> 
+                        </div>
+                        <div class="registration__box">
+                            <label class="registration__label" for="password-double">Подтверждение пароля</label> 
+                            <input class="registration__input" id="password-double" name="password-double" type="password" placeholder="Повторите пароль"> 
+                        </div>
+                        <div class="registration__gender">
+                            <h3 class="registration__label">Пол</h3>
+                            <div class="registration__items">
+                                <input class="item__input" type="radio" id="radio-1" name="gender" value="1">
+                                <label  class="item__label" for="radio-1">Мужчина</label>
+                            </div>
+                            <div class="registration__items">
+                                <input class="item__input" type="radio" id="radio-2" name="gender" value="2">
+                                <label class="item__label" for="radio-2">Женщина</label>
+                            </div>
+                        </div>
+                        <div class="registration__story">
+                            <h2 class="registration__label">О себе</h2>
+                            <textarea class="registration__textarea" id="story" name="story" placeholder="Расскажите о себе..."></textarea>
+                        </div>
+                        <div class="registration__checkbox">
+                            <input class="checkbox__input" id="checkbox" name="checkbox" type="checkbox">
+                            <label class="registration__label registration__label_checkbox" for="checkbox">Я согласен получать обновления на почту</label>
+                        </div>
+                        <div class="registration__submit">
+                            <button class="registration__button">Регистрация</button>
+                        </div>
+                    </div>
+                </form>
+            </section> 
+    </main>            
+</body>
+</html>

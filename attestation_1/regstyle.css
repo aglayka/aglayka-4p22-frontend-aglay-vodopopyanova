@@ -1,0 +1,815 @@
+*{
+    box-sizing: border-box;
+}
+
+.body { 
+    display: flex;
+    position: relative;
+    width: 1440px;
+    height: 1184px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #FFFFFF;
+}
+
+.header {
+    position: absolute;
+    width: 1440px;
+    height: 80px;
+    left: 0px;
+    top: 0px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    z-index: 3;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.header__logo {
+    position: absolute;
+    width: 222px;
+    height: 50px;
+    left: 30px;
+    top: 18px;
+    background: url(img/1280px-IU_logo\ 1.png);
+}
+
+.header__title {
+    position: absolute;
+    width: 242px;
+    height: 44px;
+    left: 282px;
+    font-size: 36px;
+    line-height: 44px;
+    color: #787878;
+}
+
+.header__registration {
+    position: absolute;
+    width: 157px;
+    height: 29px;
+    left: 1152px;
+    top: 25px;
+    font-size: 24px;
+    line-height: 29px; 
+    color: #787878;
+}
+
+.header__authorization {
+    position: absolute;
+    width: 60px;
+    height: 29px;
+    left: 1337px;
+    top: 25px;
+    font-size: 24px;
+    line-height: 29px;
+    color: #1A226B;
+}
+
+.registration__link {
+    text-decoration: none;
+    color: #787878;
+}
+
+.authorization__link {
+    text-decoration: none;
+    color: #1A226B;
+}
+
+.main {
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+}
+
+.my-registration-form {
+    position: relative;
+    margin-top: 180px;
+    width: 600px;
+    height: 875px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.25);
+}
+
+.registration {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 26px 45px 37px;
+}
+
+.registration__title {
+    top: 26px;
+    margin: 0 auto;
+    bottom: 336px;
+    width: 115px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 50px;
+    color: #787878;
+}
+
+.registration__wrap {
+    width: 100%;
+}
+
+.registration__box {
+    position: relative;
+}
+
+.registration__label {
+    display: block;
+    margin: 8px 0;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px; 
+    color: #787878; 
+}
+
+.registration__input{ 
+    width: 510px;
+    height: 49px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 36px;
+    color: #787878; 
+    border: 2px solid #787878;
+    padding: 7px 15px 0;
+}
+
+::placeholder {
+    color:#CCCCCC;
+}
+
+.registration__gender {
+    width: 100%;
+    height: 100%;
+}
+
+.registration__items {
+    font-size: 24px;
+    margin-bottom: auto;
+}
+
+.item__label {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #787878;
+    cursor: pointer;
+}
+
+.item__input{
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.item__input + label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+
+.item__input + label::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(img/Ellipse\ 1.png) 0 0 no-repeat;
+    left: 0;
+    bottom: 0;
+    padding-right: 10px;
+}
+
+.item__input:not(:disabled):not(:checked) + label:hover::before {
+    background: url(img/Ellipse\ 33.png) 0 0 no-repeat;
+    left: 0;
+    bottom: 0;
+    padding-right: 10px;
+}
+
+.item__input:checked + label::before {
+    background: url(img/Ellipse\ 2.png) 0 0 no-repeat;
+    left: 0;
+    bottom: 0;
+    padding-right: 10px;
+}
+
+.registration__story {
+    width: 510px;
+    height: 246px;
+    left: 45px;
+    top: 415px;
+    display: block;
+}
+
+.registration__textarea {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: 2px solid #787878;
+    resize: none;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 36px; 
+    color: #787878;
+    padding: 7px 15px;
+}
+
+.registration__checkbox {
+    position: relative;
+    /* left: 0; */
+    top: 24px;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 8px 0;
+}
+
+.checkbox__input {
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    width: 24px;
+    height: 24px;
+}
+
+.checkbox__input + label::before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url(img/Rectangle\ 3.png) 0 0 no-repeat;
+    left: 0;
+    bottom: 0;
+    padding-right: 10px;
+}
+
+.checkbox__input:not(:checked) + label:hover::before {
+    background: url(img/Rectangle\ 4.png) 0 0 no-repeat;
+    left: 0;
+    bottom: 0;
+    padding-right: 10px;
+    width: 24px;
+    height: 24px;
+}
+
+.checkbox__input:checked + label:hover::before {
+    background: url(img/Rectangle\ 4.png) 0 0 no-repeat;
+    left: 0;
+    bottom: 0;
+    padding-right: 10px;
+    width: 24px;
+    height: 24px;
+}
+
+.checkbox__input:checked + label::before {
+    background: url(img/Rectangle\ 5.png) 0 0 no-repeat;
+    left: 0;
+    bottom: 0;
+    padding-right: 10px;
+    width: 24px;
+    height:24px;
+}
+
+.registration__label_checkbox {
+    /* padding: 10px 30px; */
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+}
+
+.registration__submit {
+    position: absolute;
+    left: 210px;
+    bottom: 37px;
+    width: 180px;
+    height: 52px;
+ }
+ 
+.registration__button {
+    width: 100%;
+    height: 52px;
+    background: #1A226B;
+    cursor: pointer;
+    font-weight: 700; 
+    font-size: 24px;
+    line-height: 16px;
+    color: #FFFFFF;
+}
+
+
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+    .body { 
+        display: flex;
+        position: relative;
+        width:  100vw;
+        height: calc(1184/1440 * 100vw);
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .header {
+        position: absolute;
+        width: 100%;
+        height: calc(80/1440 * 100vw);
+        left: 0px;
+        top: 0px;
+    }
+    
+    .header__logo {
+        position: absolute;
+        background-size: 100%; 
+        left: calc(30 / 1440 * 100vw);
+        top: 0;
+    }
+    
+    .header__title {
+        position: absolute;
+        width: calc(242 / 1440 * 100vw);
+        height: calc(80 / 1440 * 100vw);
+        font-size: calc(36 / 1440 * 100vw);
+        line-height: calc(44 / 1440 * 100vw);
+    }
+    
+    .header__registration {
+        position: absolute;
+        width: calc(157 / 1440 * 100vw);
+        height: calc(29 / 1440 * 100vw);
+        left: calc(1152 / 1440 * 100vw);
+        top: calc(25 / 1440 * 100vw);
+        font-size: calc(24 / 1440 * 100vw);
+        line-height: calc(29 / 1440 * 100vw);
+    }
+    
+    .header__authorization {
+        position: absolute;
+        width: calc(60 / 1440 * 100vw);
+        height: calc(29 / 1440 * 100vw);
+        left: calc(1337 / 1440 * 100vw);
+        top: calc(25 / 1440 * 100vw);
+        font-size: calc(24 / 1440 * 100vw);
+        line-height: calc(29 / 1440 * 100vw);
+    }
+    
+    .main {
+        width: 100%;
+    }
+    
+    .my-registration-form {
+        position: relative;
+        margin-top: 180px;
+        width: calc(600 / 1440 * 100vw);
+        height: calc(875 / 1440 * 100vw);
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #FFFFFF;
+        box-shadow: 0px 0px calc(40 / 1440 * 100vw) 
+        calc(10 / 1440 * 100vw) rgba(0, 0, 0, 0.25);
+    }
+    
+    .registration {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding: calc(26 / 1440 * 100vw)
+        calc(45 / 1440 * 100vw) 
+        calc(37 / 1440 * 100vw);
+    }
+    
+    .registration__title {
+        top: calc(26 / 1440 * 100vw);
+        margin: 0 auto;
+        bottom: calc(336 / 1440 * 100vw);
+        width: calc(115 / 1440 * 100vw);
+        height: calc(50 / 1440 * 100vw);
+        font-size: calc(50 / 1440 * 100vw);
+        line-height: calc(50 / 1440 * 100vw);
+    }
+    
+    .registration__wrap {
+        width: 100%;
+    }
+    
+    .registration__label {
+        display: block;
+        margin: calc(8 / 1440 * 100vw) 0;
+        font-size: calc(16 / 1440 * 100vw);
+        line-height: calc(16 / 1440 * 100vw) 
+    }
+    
+    .registration__input{ 
+        width: calc(510 / 1440 * 100vw);
+        height: calc(49 / 1440 * 100vw);
+        font-size: calc(28 / 1440 * 100vw);
+        line-height: calc(36 / 1440 * 100vw);
+        padding: calc(7 / 1440 * 100vw) calc(15 / 1440 * 100vw) 0;
+    }
+    
+    .registration__gender {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .registration__items {
+        font-size: calc(24 / 1440 * 100vw);
+        margin-bottom: auto;
+    }
+    
+    .item__label {
+        font-size: calc(14 / 1440 * 100vw);
+        line-height: calc(16 / 1440 * 100vw);
+    }
+    
+    .item__input{
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+    
+    .item__input + label {
+        display: inline-flex;
+        align-items: center;
+        user-select: none;
+    }
+    
+    .item__input + label::before {
+        content: "";
+        display: inline-block;
+        width: calc(20 / 1440 * 100vw);
+        background: url(img/Ellipse\ 1.png) 0 0 no-repeat;
+        left: 0;
+        bottom: 0;
+        padding-right: calc(20 / 1440 * 100vw);
+    }
+    
+    .item__input:not(:disabled):not(:checked) + label:hover::before {
+        background: url(img/Ellipse\ 33.png) 0 0 no-repeat;
+        left: 0;
+        bottom: 0;
+        padding-right: calc(20 / 1440 * 100vw);
+    }
+    
+    .item__input:checked + label::before {
+        background: url(img/Ellipse\ 2.png) 0 0 no-repeat;
+        left: 0;
+        bottom: 0;
+        padding-right: calc(20 / 1440 * 100vw);
+    }
+    
+    .registration__story {
+        width: calc(510 / 1440 * 100vw);
+        height: calc(246 / 1440 * 100vw);
+        left: calc(45 / 1440 * 100vw);
+        top: calc(415 / 1440 * 100vw);
+        display: block;
+    }
+    
+    .registration__textarea {
+        width: 100%;
+        height: 100%;
+        outline: none;
+        resize: none;
+        font-size: calc(28 / 1440 * 100vw);
+        line-height: calc(36 / 1440 * 100vw); 
+        padding: calc(7 / 1440 * 100vw) calc(15 / 1440 * 100vw);;
+    }
+    
+    .registration__checkbox {
+        position: relative;
+        top: calc(24 / 1440 * 100vw);
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        margin: calc(8 / 1440 * 100vw) 0;
+    }
+    
+    .checkbox__input {
+        position: absolute;
+        z-index: 1;
+        opacity: 0;
+        width: calc(24 / 1440 * 100vw);
+        height: calc(24 / 1440 * 100vw);
+    }
+    
+    .checkbox__input + label::before {
+        content: "";
+        display: inline-block;
+        width: calc(24 / 1440 * 100vw);
+        background: url(img/Rectangle\ 3.png) 0 0 no-repeat;
+        left: 0;
+        bottom: 0;
+        padding-right: calc(20 / 1440 * 100vw);
+    }
+    
+    .checkbox__input:not(:checked) + label:hover::before {
+        background: url(img/Rectangle\ 4.png) 0 0 no-repeat;
+        left: 0;
+        bottom: 0;
+        padding-right: calc(20 / 1440 * 100vw);
+        width: calc(24 / 1440 * 100vw);
+    }
+    
+    .checkbox__input:checked + label:hover::before {
+        background: url(img/Rectangle\ 4.png) 0 0 no-repeat;
+        left: 0;
+        bottom: 0;
+        padding-right: calc(20 / 1440 * 100vw);
+        width: calc(24 / 1440 * 100vw);
+    }
+    
+    .checkbox__input:checked + label::before {
+        background: url(img/Rectangle\ 5.png) 0 0 no-repeat;
+        left: 0;
+        bottom: 0;
+        padding-right: calc(20 / 1440 * 100vw);
+        width: calc(24 / 1440 * 100vw);
+    }
+    
+    .registration__label_checkbox {
+        font-size: calc(14 / 1440 * 100vw);
+        line-height: calc(16 / 1440 * 100vw);
+        align-items: center;
+        display: flex;
+        cursor: pointer;
+        background-size: 100%;
+    }
+    
+    .registration__submit {
+        position: absolute;
+        left: calc(210 / 1440 * 100vw);
+        bottom: calc(37 / 1440 * 100vw);
+        width: calc(180 / 1440 * 100vw);
+        height: calc(52 / 1440 * 100vw);
+    }
+     
+    .registration__button {
+        width: 100%;
+        height: calc(52 / 1440 * 100vw);
+        font-size: calc(24 / 1440 * 100vw);
+        line-height: calc(16 / 1440 * 100vw);
+    }
+}  
+ 
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .body { 
+        display: flex;
+        position: relative;
+        width:  100vw;
+        height: calc(1184/768 * 100vw);
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .header {
+        position: absolute;
+        display: flex;
+        height: calc(80 / 768 * 100vw);
+        left: 0;
+        top: 0;
+        }
+
+    .header__logo {
+        position: absolute;
+        width: calc(124/768 * 100vw);
+        height: calc(25/768 * 100vw);
+        left: calc(30 / 768 * 100vw);
+        top: calc(18 / 768 * 100vw);
+        background-size: 100%; 
+    }
+
+    .header__title {
+        position: absolute;
+        width: calc(162 / 768 * 100vw);
+        height: calc(29 / 768 * 100vw);
+        left: calc(178 / 768 * 100vw);
+        font-size: calc(24 / 768 * 100vw);
+        line-height: calc(29 / 768 * 100vw);
+    }
+
+    .header__registration {
+        position: absolute;
+        width: calc(105 / 768 * 100vw);
+        height: calc(19 / 768 * 100vw);
+        left: calc(559 / 768 * 100vw);
+        top: calc(30 / 768 * 100vw);
+        font-size: calc(16 / 768 * 100vw);
+        line-height: calc(19 / 768 * 100vw);
+    }
+
+    .header__authorization {
+        position: absolute;
+        width: calc(40 / 768 * 100vw);
+        height: calc(19 / 768 * 100vw);
+        left: calc(700 / 768 * 100vw);
+        top: calc(30 / 768 * 100vw);
+        font-size: calc(16 / 768 * 100vw);
+        line-height: calc(19 / 768 * 100vw);
+    }
+    
+    .main {
+        width: 100%;
+    }
+    
+    .my-registration-form {
+        position: relative;
+        margin-top: calc(180 / 768 * 100vw);
+        width: calc(600 / 768 * 100vw);
+        height: calc(875 / 768 * 100vw);
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #FFFFFF;
+        box-shadow: 0px 0px calc(40 / 768 * 100vw) 
+        calc(10 / 768 * 100vw) rgba(0, 0, 0, 0.25);
+    }
+    
+    .registration {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding: calc(26 / 768 * 100vw)
+        calc(45 / 768 * 100vw) 
+        calc(37 / 768 * 100vw);
+    }
+    
+    .registration__title {
+        top: calc(26 / 768  * 100vw);
+        margin: 0 auto;
+        bottom: calc(336 / 768  * 100vw);
+        width: calc(115 / 768  * 100vw);
+        height: calc(50 / 768  * 100vw);
+        font-size: calc(50 / 768  * 100vw);
+        line-height: calc(50 / 768  * 100vw);
+    }
+    
+    .registration__wrap {
+        width: 100%;
+    }
+    
+    .registration__label {
+        display: block;
+        margin: calc(8 / 768  * 100vw) 0;
+        font-size: calc(16 / 768  * 100vw);
+        line-height: calc(16 / 768  * 100vw) 
+    }
+    
+    .registration__input{ 
+        width: calc(510 / 768  * 100vw);
+        height: calc(49 / 768 * 100vw);
+        font-size: calc(28 / 768 * 100vw);
+        line-height: calc(36 / 768 * 100vw);
+        padding: calc(7 / 768 * 100vw) calc(15 / 1440 * 100vw) 0;
+    }
+    
+    .registration__gender {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .registration__items {
+        font-size: calc(24 / 768 * 100vw);
+        margin-bottom: auto;
+    }
+    
+    .item__label {
+        font-size: calc(14 / 768 * 100vw);
+        line-height: calc(16 / 768 * 100vw);
+    }
+    
+    .item__input{
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+    
+    .item__input + label {
+        display: inline-flex;
+        align-items: center;
+        user-select: none;
+    }
+    
+    .item__input + label::before {
+        content: "";
+        display: inline-block;
+        width: calc(20 / 768 * 100vw);
+        background: url(img/Ellipse\ 1.png) 0 0 no-repeat;
+        left: 0;
+        bottom: 0;
+        padding-right: calc(20 / 768 * 100vw);
+    }
+    
+    .item__input:not(:disabled):not(:checked) + label:hover::before {
+        background: url(img/Ellipse\ 33.png) 0 0 no-repeat;
+        left: 0;
+        bottom: 0;
+        padding-right: calc(20 / 768 * 100vw);
+    }
+    
+    .item__input:checked + label::before {
+        background: url(img/Ellipse\ 2.png) 0 0 no-repeat;
+        left: 0;
+        bottom: 0;
+        padding-right: calc(20 / 768 * 100vw);
+    }
+    
+    .registration__story {
+        width: calc(510 / 768 * 100vw);
+        height: calc(246 / 768 * 100vw);
+        left: calc(45 / 768 * 100vw);
+        top: calc(415 / 768 * 100vw);
+        display: block;
+    }
+    
+    .registration__textarea {
+        width: 100%;
+        height: 100%;
+        outline: none;
+        resize: none;
+        font-size: calc(28 / 768 * 100vw);
+        line-height: calc(36 / 768 * 100vw); 
+        padding: calc(7 / 768 * 100vw) calc(15 / 1440 * 100vw);;
+    }
+    
+    .registration__checkbox {
+        position: relative;
+        top: calc(24 / 768 * 100vw);
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        margin: calc(8 / 768 * 100vw) 0;
+    }
+    
+    .checkbox__input {
+        position: absolute;
+        z-index: 1;
+        opacity: 0;
+        width: calc(24 / 768 * 100vw);
+        height: calc(24 / 768 * 100vw);
+    }
+    
+    .checkbox__input + label::before {
+        content: "";
+        display: inline-block;
+        width: calc(24 / 768 * 100vw);
+        background: url(img/Rectangle\ 3.png) 0 0 no-repeat;
+        left: 0;
+        bottom: 0;
+        padding-right: calc(20 / 768 * 100vw);
+    }
+    
+    .checkbox__input:not(:checked) + label:hover::before {
+        background: url(img/Rectangle\ 4.png) 0 0 no-repeat;
+        left: 0;
+        bottom: 0;
+        padding-right: calc(20 / 768 * 100vw);
+        width: calc(24 / 768 * 100vw);
+    }
+    
+    .checkbox__input:checked + label:hover::before {
+        background: url(img/Rectangle\ 4.png) 0 0 no-repeat;
+        left: 0;
+        bottom: 0;
+        padding-right: calc(20 / 768 * 100vw);
+        width: calc(24 / 768 * 100vw);
+    }
+    
+    .checkbox__input:checked + label::before {
+        background: url(img/Rectangle\ 5.png) 0 0 no-repeat;
+        left: 0;
+        bottom: 0;
+        padding-right: calc(20 / 768 * 100vw);
+        width: calc(24 / 768 * 100vw);
+    }
+    
+    .registration__label_checkbox {
+        font-size: calc(14 / 768 * 100vw);
+        line-height: calc(16 / 768 * 100vw);
+        align-items: center;
+        display: flex;
+        cursor: pointer;
+        background-size: 100%;
+    }
+    
+    .registration__submit {
+        position: absolute;
+        left: calc(210 / 768 * 100vw);
+        bottom: calc(37 / 768 * 100vw);
+        width: calc(180 / 768 * 100vw);
+        height: calc(52 / 768 * 100vw);
+    }
+    
+    .registration__button {
+        width: 100%;
+        line-height: calc(16 / 768 * 100vw);
+        height: calc(52 / 768 * 100vw);
+        font-size: calc(24 / 768 * 100vw);
+    }
+}   
