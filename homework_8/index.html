@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="fonts/fonts.css">
+    <link rel="icon" href="calc.png" type="image/x-icon">
+    <title>Калькулятор</title>
+</head>
+<body class="body">
+	<header class="header"> 
+		<h1 class="title">Калькулятор</h1>
+	</header>
+	<main class="main">
+        <form class="calculator-form">
+			<!-- первое число -->
+			<input class="input-one input-size" type="text" placeholder="Введите число"/>
+			<!-- блок с кнопками -->
+            <input class="input-operator input-size" type="text" placeholder="+ - / *" >
+            <!-- второе число -->
+			<input class="input-two input-size" type="text" placeholder="Введите число"/>
+            <!-- кнопка для расчётов -->
+            <button class="input-expression input-size">=</button>
+            <!-- результат -->
+            <div class="input-resultat  input-size"></div>
+        </form>
+    </main>
+    <footer class="footer"></footer>
+    <script src="script.js"></script>
+</body>
+</html>

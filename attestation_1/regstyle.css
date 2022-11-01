@@ -32,7 +32,7 @@
     height: 50px;
     left: 30px;
     top: 18px;
-    background: url(img/1280px-IU_logo\ 1.png);
+    background: url(img/1280px-IU_logo\ 1.png) 0 0 no-repeat;
 }
 
 .header__title {
@@ -53,7 +53,6 @@
     top: 25px;
     font-size: 24px;
     line-height: 29px; 
-    color: #787878;
 }
 
 .header__authorization {
@@ -64,17 +63,16 @@
     top: 25px;
     font-size: 24px;
     line-height: 29px;
-    color: #1A226B;
 }
 
 .registration__link {
     text-decoration: none;
-    color: #787878;
+    color: #1A226B;
 }
 
 .authorization__link {
     text-decoration: none;
-    color: #1A226B;
+    color: #787878;
 }
 
 .main {
@@ -186,13 +184,6 @@
     padding-right: 10px;
 }
 
-.item__input:not(:disabled):not(:checked) + label:hover::before {
-    background: url(img/Ellipse\ 33.png) 0 0 no-repeat;
-    left: 0;
-    bottom: 0;
-    padding-right: 10px;
-}
-
 .item__input:checked + label::before {
     background: url(img/Ellipse\ 2.png) 0 0 no-repeat;
     left: 0;
@@ -223,7 +214,6 @@
 
 .registration__checkbox {
     position: relative;
-    /* left: 0; */
     top: 24px;
     display: flex;
     justify-content: flex-start;
@@ -250,24 +240,6 @@
     padding-right: 10px;
 }
 
-.checkbox__input:not(:checked) + label:hover::before {
-    background: url(img/Rectangle\ 4.png) 0 0 no-repeat;
-    left: 0;
-    bottom: 0;
-    padding-right: 10px;
-    width: 24px;
-    height: 24px;
-}
-
-.checkbox__input:checked + label:hover::before {
-    background: url(img/Rectangle\ 4.png) 0 0 no-repeat;
-    left: 0;
-    bottom: 0;
-    padding-right: 10px;
-    width: 24px;
-    height: 24px;
-}
-
 .checkbox__input:checked + label::before {
     background: url(img/Rectangle\ 5.png) 0 0 no-repeat;
     left: 0;
@@ -278,7 +250,6 @@
 }
 
 .registration__label_checkbox {
-    /* padding: 10px 30px; */
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
@@ -450,14 +421,7 @@
         bottom: 0;
         padding-right: calc(20 / 1440 * 100vw);
     }
-    
-    .item__input:not(:disabled):not(:checked) + label:hover::before {
-        background: url(img/Ellipse\ 33.png) 0 0 no-repeat;
-        left: 0;
-        bottom: 0;
-        padding-right: calc(20 / 1440 * 100vw);
-    }
-    
+  
     .item__input:checked + label::before {
         background: url(img/Ellipse\ 2.png) 0 0 no-repeat;
         left: 0;
@@ -509,23 +473,7 @@
         bottom: 0;
         padding-right: calc(20 / 1440 * 100vw);
     }
-    
-    .checkbox__input:not(:checked) + label:hover::before {
-        background: url(img/Rectangle\ 4.png) 0 0 no-repeat;
-        left: 0;
-        bottom: 0;
-        padding-right: calc(20 / 1440 * 100vw);
-        width: calc(24 / 1440 * 100vw);
-    }
-    
-    .checkbox__input:checked + label:hover::before {
-        background: url(img/Rectangle\ 4.png) 0 0 no-repeat;
-        left: 0;
-        bottom: 0;
-        padding-right: calc(20 / 1440 * 100vw);
-        width: calc(24 / 1440 * 100vw);
-    }
-    
+        
     .checkbox__input:checked + label::before {
         background: url(img/Rectangle\ 5.png) 0 0 no-repeat;
         left: 0;
@@ -706,13 +654,6 @@
         padding-right: calc(20 / 768 * 100vw);
     }
     
-    .item__input:not(:disabled):not(:checked) + label:hover::before {
-        background: url(img/Ellipse\ 33.png) 0 0 no-repeat;
-        left: 0;
-        bottom: 0;
-        padding-right: calc(20 / 768 * 100vw);
-    }
-    
     .item__input:checked + label::before {
         background: url(img/Ellipse\ 2.png) 0 0 no-repeat;
         left: 0;
@@ -764,23 +705,7 @@
         bottom: 0;
         padding-right: calc(20 / 768 * 100vw);
     }
-    
-    .checkbox__input:not(:checked) + label:hover::before {
-        background: url(img/Rectangle\ 4.png) 0 0 no-repeat;
-        left: 0;
-        bottom: 0;
-        padding-right: calc(20 / 768 * 100vw);
-        width: calc(24 / 768 * 100vw);
-    }
-    
-    .checkbox__input:checked + label:hover::before {
-        background: url(img/Rectangle\ 4.png) 0 0 no-repeat;
-        left: 0;
-        bottom: 0;
-        padding-right: calc(20 / 768 * 100vw);
-        width: calc(24 / 768 * 100vw);
-    }
-    
+        
     .checkbox__input:checked + label::before {
         background: url(img/Rectangle\ 5.png) 0 0 no-repeat;
         left: 0;
