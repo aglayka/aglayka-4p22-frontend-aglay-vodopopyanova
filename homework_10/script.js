@@ -97,6 +97,8 @@ five.addEventListener('click', (e) => {
         Object.keys(objUsers).forEach((usersKey) => {
             console.log(usersKey);
         })
+        let usersKey = Object.keys(objUsers)
+        console.log(usersKey);
     })
 })
 

@@ -55,8 +55,7 @@ fetch('https://reqres.in/api/users?per_page=12')
     console.log('-----------');
     console.log('Пункт No5:');
     console.log('-----------');
-    Object.keys(objUsers).forEach((usersKey) => {
+    let usersKey = Object.keys(objUsers)
         console.log(usersKey);
-    })
 })
 
