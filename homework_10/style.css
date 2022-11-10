@@ -34,7 +34,7 @@
     flex-direction: column;
     justify-content: center;
     width: 350px;
-    height: 465px;
+    height: 485px;
     margin: 20px auto;
     border: 4px solid  #d3d3d3;
     background-color: #DCB6D7;
@@ -53,5 +53,9 @@
     padding: 5px;
 }
 
- 
+a {
+    text-decoration: none;
+    font-size: 18px;
+    font-style: bold;
+}
  
