@@ -1,38 +1,30 @@
 'use strict';
-//первое задание
+// код для выполнения пункта 1
 const one = document.querySelector('.input-one');
-
 one.addEventListener('click', (e) => {
     e.preventDefault();
-    e.currentTarget.setAttribute("disabled", "disabled");
-    async function fetchData() {
-        let result = null;
-    
-       try { 
-            const response = await fetch('https://reqres.in/api/users?per_page=12');
-            result = await response.json();
-        } catch (e) {
-            console.log(e);
-        }
+    e.currentTarget.setAttribute('disabled', 'disabled');
+    let userData = [];
+    fetch('https://reqres.in/api/users?per_page=12')
+    .then((response) => response.json())
+    .then((response) => {
+        userData = response.data;
         console.log('-----------');
         console.log('Пункт No1:');
         console.log('-----------');
-        console.log(result);
-    }
-    
-    fetchData();
+        console.log(response);
+    })
 })
 
-//второе задание
+// код для выполнения пункта 2
 const two = document.querySelector('.input-two');
-
 two.addEventListener('click', (e) => {
     e.preventDefault();
-    e.currentTarget.setAttribute("disabled", "disabled");
+    e.currentTarget.setAttribute('disabled', 'disabled');
     let userData = [];
     fetch('https://reqres.in/api/users?per_page=12') 
-      .then ((response) => response.json())
-      .then ((response) => {
+    .then((response) => response.json())
+    .then((response) => {
         userData = response.data;
         console.log('-----------');
         console.log('Пункт No2:');
@@ -43,16 +35,15 @@ two.addEventListener('click', (e) => {
     })
 })
 
-// третье задание
+// код для выполнения пункта 3
 const three = document.querySelector('.input-three');
-
 three.addEventListener('click', (e) => {  
     e.preventDefault(); 
-    e.currentTarget.setAttribute("disabled", "disabled");
+    e.currentTarget.setAttribute('disabled', 'disabled');
     let userData = []; 
     fetch('https://reqres.in/api/users?page=2') 
-      .then ((response) => response.json())
-      .then ((response) => {
+    .then((response) => response.json())
+    .then((response) => {
         userData = response.data;
         userData = userData.filter(user => (user.last_name[0] === 'F'))
         console.log('-----------');
@@ -63,52 +54,49 @@ three.addEventListener('click', (e) => {
         })
     })
 })
-// 4-e задание
-const four = document.querySelector('.input-four');
 
+// код для выполнения пункта 4
+const four = document.querySelector('.input-four');
 four.addEventListener('click', (e) => {  
     e.preventDefault(); 
-    e.currentTarget.setAttribute("disabled", "disabled");
+    e.currentTarget.setAttribute('disabled', 'disabled');
     let userData = []; 
     fetch('https://reqres.in/api/users?per_page=12') 
-    .then ((response) => response.json())
-    .then ((response) => {
+    .then((response) => response.json())
+    .then((response) => {
         userData = response.data;
-    const reduceBasa = userData.reduce((accumulator, item, index, array) => {
-        let resString = `${item.first_name} ${item.last_name}`;
-        if (index !== array.length - 1) {
-          resString += ', ';
-        }
-        accumulator += resString; 
-        
-        return accumulator    
-    },'')
-    console.log('-----------');
-    console.log('Пункт No4:');
-    console.log('-----------');
-    console.log('Наша база содержит данные следующих пользователей:', reduceBasa);
-})
+        const reduceBasa = userData.reduce((accumulator, item, index, array) => {
+            let resString = `${item.first_name} ${item.last_name}`;
+            if (index !== array.length - 1) {
+                resString += ', ';
+            }
+            accumulator += resString; 
+            return accumulator    
+            },'')
+        console.log('-----------');
+        console.log('Пункт No4:');
+        console.log('-----------');
+        console.log('Наша база содержит данные следующих пользователей:', reduceBasa);
+    })
 })
 
-
-// // пятое задание
+// код для выполнения пункта 5
 const five = document.querySelector('.input-five');
-
 five.addEventListener('click', (e) => { 
-    e.currentTarget.setAttribute("disabled", "disabled");
+    e.currentTarget.setAttribute('disabled', 'disabled');
     e.preventDefault(); 
     let userData = []; 
     fetch('https://reqres.in/api/users?per_page=12') 
-    .then ((response) => response.json())
-    .then ((response) => {
+    .then((response) => response.json())
+    .then((response) => {
         userData = response.data;
         const User = userData[0]
         console.log('-----------');
         console.log('Пункт No5:');
         console.log('-----------');
         Object.keys(User).forEach((userKey) => {
-          console.log(userKey);
+            console.log(userKey);
         })
-})
+    })
 })
 
