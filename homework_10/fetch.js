@@ -37,11 +37,11 @@ fetch('https://reqres.in/api/users?per_page=12')
     // код для выполнения пункта 4
      
     const reduceBasa = userData.reduce((accumulator, item, index, array) => {
-        let reduceBasa = `${item.first_name} ${item.last_name}`;
+        let reduceString = `${item.first_name} ${item.last_name}`;
         if (index !== array.length - 1) {
-            reduceBasa += ', ';
+            reduceString += ', ';
         }
-        accumulator += reduceBasa; 
+        accumulator += reduceString; 
         return accumulator    
     },'Наша база содержит данные следующих пользователей: ')
     console.log('-----------');

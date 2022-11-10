@@ -66,17 +66,17 @@ four.addEventListener('click', (e) => {
     .then((response) => {
         userData = response.data;
         const reduceBasa = userData.reduce((accumulator, item, index, array) => {
-            let resString = `${item.first_name} ${item.last_name}`;
+            let reduceString = `${item.first_name} ${item.last_name}`;
             if (index !== array.length - 1) {
-                resString += ', ';
+                reduceString += ', ';
             }
-            accumulator += resString; 
+            accumulator += reduceString; 
             return accumulator    
-            },'')
+            },'Наша база содержит данные следующих пользователей: ')
         console.log('-----------');
         console.log('Пункт No4:');
         console.log('-----------');
-        console.log('Наша база содержит данные следующих пользователей:', reduceBasa);
+        console.log(reduceBasa);
     })
 })
 
@@ -90,12 +90,12 @@ five.addEventListener('click', (e) => {
     .then((response) => response.json())
     .then((response) => {
         userData = response.data;
-        const User = userData[0]
+        const objUsers = userData[0]
         console.log('-----------');
         console.log('Пункт No5:');
         console.log('-----------');
-        Object.keys(User).forEach((userKey) => {
-            console.log(userKey);
+        Object.keys(objUsers).forEach((usersKey) => {
+            console.log(usersKey);
         })
     })
 })
