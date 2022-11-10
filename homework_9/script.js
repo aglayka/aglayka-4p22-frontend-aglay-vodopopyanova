@@ -22,8 +22,8 @@ function makeFibonacciFunction() {
  // Вывод в консоль
  const fibonacci = makeFibonacciFunction();
 
- console.log(fibonacci()); 
- console.log(fibonacci()); 
+fibonacci(); 
+fibonacci(); 
  console.log(fibonacci()); 
  console.log(fibonacci()); 
  console.log(fibonacci()); 
