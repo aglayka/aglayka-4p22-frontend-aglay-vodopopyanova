@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="fonts/fonts.css">
+    <link rel="icon" href="img/reg.png" type="image/x-icon">
+    <title>Форма</title>
+</head>
+<body class="body">
+    <header class="header">
+        <div class="header__logo"></div>
+        <h1 class="header__title">PCS Frontend</h1>
+        <div class="header__registration"><a class="registration__link" href="index.html">Регистрация</a></div> 
+        <div class="header__authorization">Вход</div>
+</header>
+    <main class="main">
+            <section class="my-registration-form">
+                <form class="registration">
+                    <h2 class="registration__title">Вход</h2>
+                    <div class="registration__wrap">
+                        <div class="registration__box">
+                            <label class="registration__label" for="email">
+                                <span style="color: #EE2424;">* </span>Email
+                                <span class="registration__label_error registration__label_errorEmail">Email введён некорректно</span>
+                                <span class="registration__label_error registration__label_emptyEmail">Поле обязательно для заполнения</span>
+                            </label>
+                            <input class="registration__input registration__input_email" id="email" name="email" type="email" placeholder="Введите email">
+                        </div>
+                        <div class="registration__box">
+                            <label class="registration__label" for="password">
+                                <span style="color: #EE2424;">* </span>Пароль
+                                <span class="registration__label_error registration__label_errorPassword">Пароль должен содержать не менее 8 символов</span>
+                                <span class="registration__label_error registration__label_emptyPassword">Поле обязательно для заполнения</span>
+                            </label> 
+                            <input class="registration__input registration__input_password" id="password" name="password" type="password" placeholder="Введите пароль"> 
+                        </div>
+                        <div class="registration__box">
+                            <label class="registration__label" for="password-double">
+                                <span style="color: #EE2424;">* </span>Подтверждение пароля 
+                                <span class="registration__label_error registration__label_errorPasswordDouble">Пароли не совпадают</span>
+                            </label>
+                            <input class="registration__input registration__input_passdouble" id="passdouble" name="passdouble" type="password" placeholder="Повторите пароль"> 
+                        </div>
+                        <div class="registration__gender">
+                            <h3 class="registration__label">Пол</h3>
+                            <div class="registration__items">
+                                <input class="item__input" type="radio" id="radio-1" name="gender" value="1">
+                                <label  class="item__label" for="radio-1">Мужчина</label>
+                            </div>
+                            <div class="registration__items">
+                                <input class="item__input" type="radio" id="radio-2" name="gender" value="2">
+                                <label class="item__label" for="radio-2">Женщина</label>
+                            </div>
+                        </div>
+                        <div class="registration__story">
+                            <h2 class="registration__label">О себе</h2>
+                            <textarea class="registration__textarea" id="story" name="story" placeholder="Расскажите о себе..."></textarea>
+                        </div>
+                        <div class="registration__checkbox">
+                            <input class="checkbox__input" id="checkbox" name="checkbox" type="checkbox">
+                            <label class="registration__label registration__label_checkbox" for="checkbox">Я согласен получать обновления на почту</label>
+                        </div>
+                        <div class="registration__submit">
+                            <button class="registration__button">Регистрация</button>
+                        </div>
+                    </div>
+                </form>
+            </section> 
+    </main>
+    
+    <script src="scrypt.js"></script>
+</body>
+</html>
